@@ -11,8 +11,46 @@
 
 <body>
     <header>
-        <img class="logo-marca" src="../assets/Banking.png" alt="">
+        <div class="contenedor-img">
+            <a href="inicio.html">
+                <img class="logo-marca" src="../assets/logoBanco.png" alt="">
+            </a>
+        </div>
+
+        <div class="login-boton">
+            <input type="checkbox" class="menu-desplegable" id="menu-toggle">
+            <label class="login-link" for="menu-toggle">
+            <img class="user" src="../assets/user.webp" alt="">
+        </label>
+            <div class="menu">
+                <a href="#">LogIn</a>
+                <a href="registro.html">Registro</a>
+            </div>
+        </div>
     </header>
+    <main>
+        <div class="Login">
+            <div class="Login1">
+                <h1 class="h1">Login</h1>
+                <form id="Login">
+
+                    <label for="usuario">Correo</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+
+                    <button type="submit">Login</button>
+                    <br>
+                    <div class="no-registro">
+                        <p>No tengo cuenta.</p>
+                        <a href="registro.html">Registrarse</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
