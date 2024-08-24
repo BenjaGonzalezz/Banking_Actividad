@@ -7,7 +7,6 @@ body {
     padding: 0;
     --principal-color: rgb(255, 215, 215);
     --secundario-color: rgb(224, 50, 50);
-    /* background-image: url(../assets/bancooooo.jpg); */
 }
 
 header {
@@ -17,7 +16,7 @@ header {
 }
 
 .user {
-    width: 60px;
+    width: 46px;
 }
 
 .user:hover {
@@ -31,7 +30,6 @@ header {
     justify-content: end;
     width: 100%;
     margin-right: 90px;
-    font-size: 27px;
 }
 
 .menu-desplegable {
@@ -44,6 +42,8 @@ header {
     padding: 3px;
     border-radius: 10px;
     box-shadow: 0 0 5px black;
+    max-width: 55px;
+    height: 55px;
 }
 
 .menu {
@@ -52,17 +52,20 @@ header {
     top: 100%;
     right: 0;
     background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 10px;
-    transition: max-height .9s ease-out;
+    transition: max-height .7s ease-out;
     box-shadow: 0 0 44px rgba(0, 0, 0, 0.2);
     max-height: 0;
+    font-size: 23px;
 }
 
 .menu a {
     display: block;
-    padding: 10px;
+    padding: 13px;
     text-decoration: none;
     color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu a:hover {
@@ -70,11 +73,12 @@ header {
 }
 
 .menu-desplegable:checked+.login-link+.menu {
-    max-height: 300px;
+    max-height: 150px;
 }
 
 .menu-desplegable:not(:checked)+.login-link+.menu {
     transition: none;
+    border: none;
 }
 
 .contenedor-img {
@@ -86,6 +90,8 @@ header {
 .logo-marca {
     width: 100px;
 }
+
+/*MAIN*/
 
 h1 {
     text-align: center;
@@ -113,4 +119,50 @@ p {
     margin: auto;
     font-size: 17px;
     margin-bottom: 200px;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    height: 200px;
+    width: 100%;
+    background-color: var(--principal-color);
+}
+
+.footer-title {
+    width: 100%;
+    background-color: rgb(253, 157, 157);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 17px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    margin: 0;
+}
+
+.footer-cont {
+    width: 50%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer-text {
+    padding-top: 15px;
+}
+
+.parrafo{
+    margin-top: 20px;
+}
+.footer-cont2 {
+    width: 50%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contenido-footer {
+    display: flex;
+    margin-top: 10px;
 }
