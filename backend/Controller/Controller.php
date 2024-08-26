@@ -10,12 +10,11 @@ switch ($function) {
 }
 function GuardarUsuario()
 {
-    $id = $_POST['id'];
-    $ = $_POST[''];
-    $ = $_POST[''];
-    $ = $_POST[''];
-    $ = $_POST[''];
-    $resultado = (new Usuario())->();
+    $id_usuario = $_POST['id_usuario'];
+    $nombrecompleto = $_POST['nombrecompleto'];
+    $email = $_POST['email'];
+    $contraseña = $_POST['contraseña'];
+    $resultado = (new Usuario())->GuardarUsuarioModel($id_usuario, $nombrecompleto, $email, $contraseña);
     echo json_encode($resultado);
 
 }
