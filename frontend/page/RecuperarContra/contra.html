@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="contra.css">
+    <title>ingresar Email</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="contenedor-img">
+            <a href="../inicio.html">
+                <img class="logo-marca" src="../../assets/logoBanco.png" alt="">
+            </a>
+        </div>
+
+        <div class="login-boton">
+            <input type="checkbox" class="menu-desplegable" id="menu-toggle">
+            <label class="login-link" for="menu-toggle">
+            <img class="user" src="../../assets/user.webp" alt="">
+        </label>
+            <div class="menu">
+                <a href="../login.html">LogIn</a>
+                <a href="../registro/registro.html">Registro</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="Login">
+            <div class="Login1">
+                <h1 class="h1">¿Necesitas ayuda con tu contraseña?</h1>
+                <form id="Login">
+                    <p class="parrafo-contra">Ingrese su Email y le inviaremos la nueva contraseña a su Email</p>
+                    <label for="usuario">Correo Electronico</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <button class="boton-loginnn" type="submit">Enviar</button>
+                    <a class="volver-boton" href="../login.html">Volver</a>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-title">
+            <p class="footer-title-lit">Banking Copyright © 2024</p>
+        </div>
+        <div class="contenido-footer">
+            <div class="footer-cont">
+                <h4 class="footer-text">Contactanos</h4>
+                <p class="parrafo">
+                    Telefono: 091 605 032
+                </p>
+                <p class="parrafo">
+                    Email: ebanking@gmail.com
+                </p>
+            </div>
+            <div class="footer-cont2">
+                <h4 class="footer-text">Direccion</h4>
+                <p class="parrafo">
+                    Colonia del Sacramento, Andres Rebufat 400
+                </p>
+
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

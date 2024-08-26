@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="registro.css">
-    <script src="registro.js"></script>
+    <link rel="stylesheet" href="contra.css">
+    <title>Neuva Contraseña</title>
 </head>
 
 <body>
@@ -24,40 +23,27 @@
         </label>
             <div class="menu">
                 <a href="../login.html">LogIn</a>
-                <a href="#">Registro</a>
+                <a href="../../page/registro/registro.html">Registro</a>
             </div>
         </div>
     </header>
-    <div class="register">
-        <div class="register1">
-            <h1 class="h1">Registrarse</h1>
-            <form id="register">
+    <main>
+        <div class="Login">
+            <div class="Login1">
+                <h1 class="h1">Ingrese la nueva contraseña</h1>
+                <form id="Login">
+                    <p class="parrafo-contra">Ingrese la contraseña enviada a su correo electronico.</p>
+                    <label for="usuario">Nueva Contraseña</label>
+                    <input type="password" id="correo" name="correo" required>
+                    <label for="usuario">Repita la nueva contraseña</label>
+                    <input type="password" id="correo" name="correo" required>
 
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre" required>
+                    <button class="boton-loginnn" type="submit">Restablecer Contraseña</button>
 
-                <label for="correo">Correo Electronico</label>
-                <input type="email" id="correo" name="correo" required>
-
-                <label for="contraseña">Contraseña</label>
-
-                <input type="password" id="contraseña" name="contraseña" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número" required>
-
-                <p class="aviso">
-                    debe contener almenos 8 caracteres, una letra mayúscula, una minúscula y un número
-                </p>
-
-                <button class="boton-reg" type="submit">Registrarse</button>
-                <div class="div-cont">
-                    <div class="div-izq"></div>
-                    <p>O</p>
-                    <div class="div-der"></div>
-                </div>
-
-                <a class="boton-log" href="../login.html">LogIn</a>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
+    </main>
     <footer>
         <div class="footer-title">
             <p class="footer-title-lit">Banking Copyright © 2024</p>
@@ -82,7 +68,5 @@
         </div>
     </footer>
 </body>
-
-
 
 </html>

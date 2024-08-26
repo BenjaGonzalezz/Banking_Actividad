@@ -138,95 +138,27 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .Login1 button:hover {
+    opacity: .8;
+}
+
+.parrafo-contra {
     opacity: .7;
 }
 
-.no-registro {
+.volver-boton {
     display: flex;
-}
-
-p {
-    margin: 0 10px;
-}
-
-
-/* BOTON REGISTRO */
-
-.boton-log {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid rgb(223, 47, 47);
-    color: rgb(255, 0, 0);
-    cursor: pointer;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+    align-items: end;
+    justify-content: end;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px;
+    color: rgb(23, 95, 189);
+    font-size: 17px;
 }
 
-.boton-loginnn {
-    border-radius: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px;
-}
-
-.boton-log:hover {
-    opacity: .7;
-}
-
-.o {
-    text-align: center;
-    border-bottom: 1px solid var(--principal-color);
-    margin: 50px;
-}
-
-.div-cont {
-    display: flex;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-    opacity: .7;
-}
-
-.div-izq {
-    display: flex;
-    width: 50%;
-    background-color: rgb(0, 0, 0);
-    height: 1px;
-    margin-right: 5px;
-}
-
-.div-der {
-    width: 50%;
-    background-color: rgb(0, 0, 0);
-    height: 1px;
-    margin-left: 5px;
-}
-
-
-/*olvido su contraseñá*/
-
-.olvido-cont {
-    margin: 40px 0;
-    text-align: center;
-    justify-content: center;
-}
-
-.olvido-cont-text {
-    text-decoration: none;
-    color: rgb(19, 65, 214);
-    font-size: 19px;
-    text-align: center;
-    justify-content: center;
-}
-
-.olvido-cont-text:hover {
+.volver-boton:hover {
     opacity: .7;
 }
 

@@ -17,6 +17,7 @@ header {
 
 .user {
     width: 46px;
+    user-select: none;
 }
 
 .user:hover {
@@ -89,7 +90,9 @@ header {
 
 .logo-marca {
     width: 100px;
+    user-select: none;
 }
+
 
 /*MAIN*/
 
@@ -113,14 +116,13 @@ h3 {
     margin-top: 100px;
 }
 
-p {
+.pa {
     width: 550px;
     text-align: center;
     margin: auto;
     font-size: 17px;
     margin-bottom: 200px;
 }
-
 
 
 /* FOOTER */
@@ -135,9 +137,14 @@ footer {
     width: 100%;
     background-color: rgb(253, 157, 157);
     text-align: center;
-    padding: 10px 0;
+    padding: 18px 0;
     font-size: 17px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.footer-title-lit {
+    margin: 0;
 }
 
 h4 {
@@ -154,14 +161,16 @@ h4 {
     padding-top: 15px;
 }
 
-.parrafo{
+.parrafo {
     margin-top: 20px;
 }
+
 .footer-cont2 {
     width: 50%;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .contenido-footer {
     display: flex;
     margin-top: 10px;
