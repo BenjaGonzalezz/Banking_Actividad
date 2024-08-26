@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-08-2024 a las 22:04:23
+-- Tiempo de generación: 26-08-2024 a las 22:37:28
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -44,7 +44,8 @@ CREATE TABLE `transaccion` (
   `n_cuentadestino` int(90) NOT NULL,
   `monto` int(255) NOT NULL,
   `moneda` int(255) NOT NULL,
-  `concepto` varchar(255) NOT NULL
+  `concepto` varchar(255) NOT NULL,
+  `transaccion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -75,8 +76,9 @@ ALTER TABLE `cuenta`
 -- Indices de la tabla `transaccion`
 --
 ALTER TABLE `transaccion`
-  ADD PRIMARY KEY (`n_cuentadestino`,`n_cuentaremitente`) USING BTREE,
-  ADD KEY `n_cuentaremitente` (`n_cuentaremitente`);
+  ADD PRIMARY KEY (`transaccion`),
+  ADD KEY `n_cuentaremitente` (`n_cuentaremitente`),
+  ADD KEY `n_cuentadestino` (`n_cuentadestino`);
 
 --
 -- Indices de la tabla `usuario`
@@ -87,6 +89,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `transaccion`
+--
+ALTER TABLE `transaccion`
+  MODIFY `transaccion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
