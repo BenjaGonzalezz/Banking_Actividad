@@ -209,6 +209,9 @@ p {
     margin-left: 5px;
 }
 
+
+/* MONEDA */
+
 .monto-tra {
     width: 100%;
     display: flex;
@@ -217,14 +220,20 @@ p {
 .montoo {
     width: 50%;
 }
-
-.sel-moneda {
-    display: flex;
+.selector-moneda{
+    margin: auto 0 auto 50px;
 }
-
-.sel-moneda2 {
-    position: absolute;
-    right: 160px;
+.l-selector{
+    font-size: 16px;
+    margin-right: 10px;
+    opacity: .7;
+}
+.select-moneda{
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--principal-color);
 }
 
 
