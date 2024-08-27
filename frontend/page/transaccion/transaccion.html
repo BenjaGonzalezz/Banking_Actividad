@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transacciones</title>
+    <link rel="stylesheet" href="transaccion.css">
+    <script src="transaccion.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="contenedor-img">
+            <a href="../inicio.html">
+                <img class="logo-marca" src="../../assets/logoBanco.png" alt="">
+            </a>
+        </div>
+
+        <div class="login-boton">
+            <input type="checkbox" class="menu-desplegable" id="menu-toggle">
+            <label class="login-link" for="menu-toggle">
+            <img class="user" src="../../assets/user.webp" alt="">
+        </label>
+            <div class="menu">
+                <a href="../login.html">LogIn</a>
+                <a href="../registro/registro.html">Registro</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="transaccion">
+            <div class="transaccion1">
+                <h1 class="h1">Transaccion</h1>
+                <form id="Login">
+                    <label for="usuario">Numero de cuenta</label>
+                    <input type="numer" id="" name="n_cuentadestino" required>
+
+                    <div class="monto-tra">
+                        <div class="montoo">
+                            <label class="monto" for="usuario">Monto a transferir</label>
+                            <input type="number" id="" name="monto" required>
+                        </div>
+
+                        <details class="sel-moneda2">
+                            <summary>Selecciona moneda</summary>
+
+                            <input type="radio" id="usd" name="currency" value="USD">
+                            <label class="moneda" for="usd">USD</label>
+
+                            <input type="radio" id="uyu" name="currency" value="UYU">
+                            <label class="moneda" for="uyu">Peso Uruguayo</label>
+
+                        </details>
+
+                    </div>
+
+                    <label for="contraseña">Mensaje (Opcional)</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+
+                    <button class="boton-loginnn" type="submit">ghdhg</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-title">
+            <p class="footer-title-lit">Banking Copyright © 2024</p>
+        </div>
+        <div class="contenido-footer">
+            <div class="footer-cont">
+                <h4 class="footer-text">Contactanos</h4>
+                <p class="parrafo">
+                    Telefono: 091 605 032
+                </p>
+                <p class="parrafo">
+                    Email: ebanking@gmail.com
+                </p>
+            </div>
+            <div class="footer-cont2">
+                <h4 class="footer-text">Direccion</h4>
+                <p class="parrafo">
+                    Colonia del Sacramento, Andres Rebufat 400
+                </p>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
