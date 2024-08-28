@@ -7,7 +7,6 @@ body {
     padding: 0;
     --principal-color: rgb(255, 215, 215);
     --secundario-color: rgb(224, 50, 50);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header {
@@ -30,7 +29,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 100%;
     margin-right: 90px;
 }
 
@@ -67,6 +65,7 @@ header {
     padding: 13px;
     text-decoration: none;
     color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu a:hover {
@@ -93,6 +92,21 @@ header {
     user-select: none;
 }
 
+.div-transaccion{
+    display: flex;
+    margin: auto 50px auto 0;
+    width: 100%;
+    text-align: end;
+    justify-content: end;
+}
+.a-transaccion{
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(240, 56, 56);
+}
+.a-transaccion:hover{
+    opacity: .7;
+}
 
 /* LOGIN */
 
@@ -117,16 +131,11 @@ h1 {
     width: 440px;
 }
 
-.transaccion1 input {
+.transaccion1 .input_cuenta {
     display: block;
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
     box-sizing: border-box;
-    margin: 30px 0;
-}
-
-.transaccion1 label {
     margin: 10px 0;
 }
 
@@ -233,7 +242,44 @@ p {
     padding: 5px;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid var(--principal-color);
+    border: 1px solid var(--secundario-color);
+}
+.parrafo-cuenta{
+    opacity: .7;
+    margin: 7px 0 0 0;
+}
+.parrafo-cuenta2{
+    opacity: .7;
+    margin: 0;
+}
+.input-cuentaa{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 8px 0 30px 0;
+}
+.l-mensaje{
+    padding-top: 30px;
+}
+.mensaje{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.volver-boton {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    text-decoration: none;
+    color: rgb(23, 95, 189);
+    font-size: 17px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.volver-boton:hover {
+    opacity: .7;
 }
 
 

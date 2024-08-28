@@ -1,89 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transacciones</title>
-    <link rel="stylesheet" href="transaccion.css">
+    <link rel="stylesheet" href="transaccion.css" />
     <script src="transaccion.js"></script>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <header>
-        <div class="contenedor-img">
-            <a href="../inicio.html">
-                <img class="logo-marca" src="../../assets/logoBanco.png" alt="">
-            </a>
-        </div>
+      <div class="contenedor-img">
+        <a href="../inicio.html">
+          <img class="logo-marca" src="../../assets/logoBanco.png" alt="" />
+        </a>
+      </div>
+      <div class="div-transaccion">
+          <a class="a-transaccion" href="../transaccion/transaccion.html">transacción</a>
+      </div>
 
-        <div class="login-boton">
-            <input type="checkbox" class="menu-desplegable" id="menu-toggle">
-            <label class="login-link" for="menu-toggle">
-            <img class="user" src="../../assets/user.webp" alt="">
+      <div class="login-boton">
+        <input type="checkbox" class="menu-desplegable" id="menu-toggle" />
+        <label class="login-link" for="menu-toggle">
+          <img class="user" src="../../assets/user.webp" alt="" />
         </label>
-            <div class="menu">
-                <a href="../login.html">LogIn</a>
-                <a href="../registro/registro.html">Registro</a>
-            </div>
+        <div class="menu">
+          <a href="../login.html">LogIn</a>
+          <a href="../registro/registro.html">Registro</a>
         </div>
+      </div>
     </header>
     <main>
-        <div class="transaccion">
-            <div class="transaccion1">
-                <h1 class="h1">Transaccion</h1>
-                <form id="Login">
-                    <label for="usuario">Numero de cuenta</label>
-                    <input type="numer" id="" name="n_cuentadestino" required>
+      <div class="transaccion">
+        <div class="transaccion1">
+          <h1 class="h1">Transaccion</h1>
+          <form id="Login">
+            <label for="usuario">Numero de cuenta</label>
+            <p class="parrafo-cuenta">
+              Ingrese el Nª de cuenta del destinatario
+            </p>
+            <p class="parrafo-cuenta2">Ej: 525232</p>
+            <input
+              type="numer"
+              id=""
+              name="n_cuentadestino"
+              class="input-cuentaa"
+              required
+            />
 
-                    <div class="monto-tra">
-                        <div class="montoo">
-                            <label class="monto" for="usuario">Monto a transferir</label>
-                            <input type="number" id="" name="monto" required>
-                        </div>
+            <div class="monto-tra">
+              <div class="montoo">
+                <label class="monto" for="usuario">Monto a transferir</label>
 
-                        <div class="selector-moneda">
-                            <label class="l-selector">Selecciona tu moneda:</label>
-                            <select id="" class="select-moneda">
-                                <option value="usd">USD</option>
-                                <option value="uyu">Peso Uruguayo</option>
-                            </select>
-                        </div>
+                <input
+                  type="number"
+                  id=""
+                  name="monto"
+                  class="input_cuenta"
+                  required
+                />
+              </div>
 
-                    </div>
-
-                    <label for="contraseña">Mensaje (Opcional)</label>
-                    <input type="password" id="contraseña" name="contraseña" required>
-
-                    <button class="boton-loginnn" type="submit">ghdhg</button>
-                </form>
+              <div class="selector-moneda">
+                <label class="l-selector">Selecciona la moneda:</label>
+                <select id="" class="select-moneda">
+                  <option value="usd">USD</option>
+                  <option value="uyu">Peso Uruguayo</option>
+                </select>
+              </div>
             </div>
+            <div class="mensaje">
+              <label class="l-mensaje" for="contraseña"
+                >Mensaje (Opcional)</label
+              >
+              <p class="parrafo-cuenta">
+                Escribe un mensaje al destinatario con un limite de 255
+                caracteres
+              </p>
+              <textarea
+                name=""
+                class="input_cuenta"
+                maxlength="255"
+                style="resize: none"
+              ></textarea>
+            </div>
+            <button class="boton-loginnn" type="submit">
+              Enviar transferencia
+            </button>
+            <a class="volver-boton" href="javascript:history.back()">Volver</a>
+          </form>
         </div>
+      </div>
     </main>
     <footer>
-        <div class="footer-title">
-            <p class="footer-title-lit">Banking Copyright © 2024</p>
+      <div class="footer-title">
+        <p class="footer-title-lit">Banking Copyright © 2024</p>
+      </div>
+      <div class="contenido-footer">
+        <div class="footer-cont">
+          <h4 class="footer-text">Contactanos</h4>
+          <p class="parrafo">Telefono: 091 605 032</p>
+          <p class="parrafo">Email: ebanking@gmail.com</p>
         </div>
-        <div class="contenido-footer">
-            <div class="footer-cont">
-                <h4 class="footer-text">Contactanos</h4>
-                <p class="parrafo">
-                    Telefono: 091 605 032
-                </p>
-                <p class="parrafo">
-                    Email: ebanking@gmail.com
-                </p>
-            </div>
-            <div class="footer-cont2">
-                <h4 class="footer-text">Direccion</h4>
-                <p class="parrafo">
-                    Colonia del Sacramento, Andres Rebufat 400
-                </p>
-
-            </div>
+        <div class="footer-cont2">
+          <h4 class="footer-text">Direccion</h4>
+          <p class="parrafo">Colonia del Sacramento, Andres Rebufat 400</p>
         </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

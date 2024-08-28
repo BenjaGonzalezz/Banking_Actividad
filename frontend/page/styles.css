@@ -7,7 +7,6 @@ body {
     padding: 0;
     --principal-color: rgb(255, 215, 215);
     --secundario-color: rgb(224, 50, 50);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header {
@@ -30,7 +29,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 100%;
     margin-right: 90px;
 }
 
@@ -67,6 +65,7 @@ header {
     padding: 13px;
     text-decoration: none;
     color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu a:hover {
@@ -91,6 +90,22 @@ header {
 .logo-marca {
     width: 100px;
     user-select: none;
+}
+
+.div-transaccion{
+    display: flex;
+    margin: auto 50px auto 0;
+    width: 100%;
+    text-align: end;
+    justify-content: end;
+}
+.a-transaccion{
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(240, 56, 56);
+}
+.a-transaccion:hover{
+    opacity: .7;
 }
 
 

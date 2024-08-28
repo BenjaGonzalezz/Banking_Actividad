@@ -29,7 +29,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 100%;
     margin-right: 90px;
 }
 
@@ -93,8 +92,27 @@ header {
     user-select: none;
 }
 
+.div-transaccion{
+    display: flex;
+    margin: auto 50px auto 0;
+    width: 100%;
+    text-align: end;
+    justify-content: end;
+}
+.a-transaccion{
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(240, 56, 56);
+}
+.a-transaccion:hover{
+    opacity: .7;
+}
+
+
 
 /*MAIN*/
+
+
 
 h1 {
     text-align: center;
