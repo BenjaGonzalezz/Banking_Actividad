@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="agregar.css" />
+    <title>Agregar Saldo</title>
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-img">
+        <a href="../inicio.html">
+          <img class="logo-marca" src="../../assets/logoBanco.png" alt="" />
+        </a>
+      </div>
+      <div class="div-transaccion">
+        <a class="a-transaccion" href="../transaccion/transaccion.html"
+          >transacción</a
+        >
+      </div>
+
+      <div class="login-boton">
+        <input type="checkbox" class="menu-desplegable" id="menu-toggle" />
+        <label class="login-link" for="menu-toggle">
+          <img class="user" src="../../assets/user.webp" alt="" />
+        </label>
+        <div class="menu">
+          <a href="../login.html">LogIn</a>
+          <a href="../registro/registro.html">Registro</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="agregar-cont">
+        <div class="saldo-actual">
+          <div class="saldo">
+            <h1>Saldo Actual</h1>
+            <p>*SALDO*</p>
+            <h3>Numero de Cuenta</h3>
+            <div class="num">
+              <p>*num_cuenta*</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="agregar-saldo">
+          <div class="a-saldo">
+            <form>
+              <h3>Agregar Saldo</h3>
+              <div class="dis">
+                
+                <label for="usuario">Cantidad</label>
+
+                <input type="number" id="saldo" name="saldo" required />
+
+              </div>
+
+              <button class="boton-agregar" type="submit">Agregar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
