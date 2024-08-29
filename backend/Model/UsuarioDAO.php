@@ -13,20 +13,14 @@ class Usuario{
         }else{
              $_SESSION["email"] = $email; 
              return "resultado correcto";
-            }
-    
+            }    
         }
     
-    function RegisterUsuarioModel($id_usuario, $nombrecompleto, $email, $contraseña){
+    function RegisterUsuarioModel($nombrecompleto, $email, $contraseña){
             $connection = connection();
-            $sql = "INSERT INTO usuario(id_usuario, nombrecompleto, email, contraseña) VALUES($id_usuario, $nombrecompleto, $email, $contraseña);";
+            $sql = "INSERT INTO usuario(nombrecompleto, email, contraseña) VALUES('$nombrecompleto', '$email', '$contraseña');";
             $respuesta = $connection->query($sql);
             return $respuesta;
-            if ($respuesta == false){
-                if ($connection->errno == 1060){
-                    $respuesta=$this->ActualizarContraseñaModel($contraseña, $email);
-                }
-            }
         }
     
 
@@ -37,5 +31,10 @@ class Usuario{
         return $respuesta;
     }
 }
+
+
+
+
+
 
 ?>

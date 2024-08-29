@@ -1,26 +1,30 @@
-window.onload=()=>{
-    
-    let formElement = document.querySelector("#Login")
+window.onload=async ()=> {
+    loginUsuario();
+}
+function loginUsuario(){
+    let formElement=document.querySelector("#Login");
 
-    formElement.onsubmit = async (e) =>{
+    formElement.onsubmit = async (e) => {
         e.preventDefault()
         let formData = new FormData(formElement);
-        let url = "http://localhost/banking_actividad/backend/Controller/Controller.php?function=Guardar"
+        let url = "http://localhost/banking_actividad/backend/Controller/Controller.php?function=LoginUsuario";
 
         let config = {
-                method: 'POST',
-                body: formData
+            method:"POST",
+            body:formData
         }
-
-        let respuesta = await fetch(url, config);
+        let respuesta = await fetch(url,config);
         let datos = await respuesta.json();
         console.log(datos);
-    
+        formElement.reset();
+
+
         if (datos ==null){
             alert("Datos incorrectos");
         }else{
-           alert("Bienvenido al sistema");
-           window.location.href='../IngresarImagen/IngresarImagen.html'
+           alert("Login existoso");
+           window.location.href='../page/inicio.html';
         }
     }
+
 }

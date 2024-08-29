@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-08-2024 a las 22:37:28
+-- Tiempo de generación: 29-08-2024 a las 02:10:05
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -57,9 +57,21 @@ CREATE TABLE `transaccion` (
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `nombrecompleto` varchar(255) NOT NULL,
-  `email` int(11) NOT NULL,
-  `contraseña` int(11) NOT NULL
+  `email` varchar(11) NOT NULL,
+  `contraseña` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nombrecompleto`, `email`, `contraseña`) VALUES
+(1, 'juan sosa', '0', '123456789'),
+(2, 'JUAN', 'BENJY@GMAIL', '1234567'),
+(3, 'juansito', 'mateo@gmail', '123456789'),
+(9, 'don dasjdajs', 'benjamincho', '2147483647'),
+(10, 'kakakak 3131', 'benjamincho', '2147483647'),
+(11, 'Mateito', 'login@gmail', '12345678Mateo');
 
 --
 -- Índices para tablas volcadas
@@ -91,6 +103,12 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `cuenta`
+--
+ALTER TABLE `cuenta`
+  MODIFY `n_cuenta` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `transaccion`
 --
 ALTER TABLE `transaccion`
@@ -100,7 +118,7 @@ ALTER TABLE `transaccion`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas

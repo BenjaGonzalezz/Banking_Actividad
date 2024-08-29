@@ -4,20 +4,19 @@ require_once "../Model/UsuarioDAO.php";
 $function = $_GET['function'];
 
 switch ($function) {
-    case "Login":
+    case "LoginUsuario":
         LoginUsuario();
         break;
-    case "Register":
+    case "RegisterUsuario":
         RegisterUsuario();
         break;
 }
 function RegisterUsuario()
 {
-    $id_usuario = $_POST['id_usuario'];
     $nombrecompleto = $_POST['nombrecompleto'];
     $email = $_POST['email'];
     $contraseña = $_POST['contraseña'];
-    $resultado = (new Usuario())->RegisterUsuarioModel($id_usuario, $nombrecompleto, $email, $contraseña);
+    $resultado = (new Usuario())->RegisterUsuarioModel($nombrecompleto, $email, $contraseña);
     echo json_encode($resultado);
 
 }
