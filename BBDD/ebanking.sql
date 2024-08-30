@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-08-2024 a las 02:10:05
+-- Tiempo de generación: 30-08-2024 a las 05:27:58
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -57,7 +57,7 @@ CREATE TABLE `transaccion` (
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `nombrecompleto` varchar(255) NOT NULL,
-  `email` varchar(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `contraseña` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -71,7 +71,11 @@ INSERT INTO `usuario` (`id_usuario`, `nombrecompleto`, `email`, `contraseña`) V
 (3, 'juansito', 'mateo@gmail', '123456789'),
 (9, 'don dasjdajs', 'benjamincho', '2147483647'),
 (10, 'kakakak 3131', 'benjamincho', '2147483647'),
-(11, 'Mateito', 'login@gmail', '12345678Mateo');
+(11, 'Mateito', 'login@gmail', '12345678Mateo'),
+(12, 'Mariano Gonzalez', 'Marianito@g', '$2y$10$fjTT9NthF6ir693Eh5fkieiTzsBa/SEhLQnZA6ZhS/h48szjfI8j2'),
+(13, 'ddasdas das', 'Benjamincit', '$2y$10$UxdwRCT8W76PZJ7Gg3BRyOKCJYmbzZYG2HXfz1s6Rt2zINJxWLMZK'),
+(14, 'Nacional MasQpenadoy', 'Nacional1899@bolso.com', '$2y$10$1zRCma51oXHYHV0MDJHi5uVsIpn.XJKCiUSZSuDWMhBQ3cUNAm5W2'),
+(15, 'Prueba Contra', 'CONTRASENA@GMAIL.COM', '$2y$10$AXM4QV/lnxv.xuBufAhz8OPezZ8iJ4Fo.Ai9HZoNHPmKzCZxa4kqe');
 
 --
 -- Índices para tablas volcadas
@@ -118,7 +122,7 @@ ALTER TABLE `transaccion`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas

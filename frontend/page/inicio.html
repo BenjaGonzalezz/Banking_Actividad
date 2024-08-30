@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="inicio.js"></script>
     <link rel="stylesheet" href="inicio.css">
     <title>BANKING OFICIAL</title>
 </head>
@@ -24,8 +25,10 @@
             <img class="user" src="../assets/user.webp" alt="">
         </label>
             <div class="menu">
-                <a href="login.html">LogIn</a>
-                <a href="../page/registro/registro.html">Registro</a>
+                <a id="desaparecer" href="login.html">LogIn</a>
+                <a id="desaparecer1" href="../page/registro/registro.html">Registro</a>
+                <span id="userEmailDisplay" style="padding: 8px;">Email</span>
+                <a id="cerrarSesion" href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
             </div>
         </div>
     </header>
@@ -37,7 +40,7 @@
         <p class="pa">Bienvenido a Banking, el banco especializado en ofrecer las transferencias más seguras y eficientes del mercado. En un mundo donde la rapidez y la seguridad son esenciales, nos enorgullece ser tu socio confiable para todas tus necesidades de transferencia
             de dinero.</p>
         <h3>¿Quiénes Somos? </h3>
-        <p class="pa">En Banking, nos hemos especializado en un aspecto crucial de la banca moderna: las transferencias de dinero. Fundado con el compromiso de ofrecer la máxima seguridad y eficiencia en cada transacción, nuestro banco se dedica a proporcionar soluciones
+        <p class="pa">Nos hemos especializado en un aspecto crucial de la banca moderna: las transferencias de dinero. Fundado con el compromiso de ofrecer la máxima seguridad y eficiencia en cada transacción, nuestro banco se dedica a proporcionar soluciones
             que te permiten mover tu dinero con confianza y tranquilidad.</p>
     </main>
     <footer>

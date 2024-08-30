@@ -1,39 +1,67 @@
 <?php
 require_once "../Connection/Connection.php";
 
-class Usuario{ 
+class Usuario { 
 
     function LoginUsuarioModel($email, $contraseña){
         $connection = connection();
-        $sql = "SELECT * FROM usuario WHERE email='$email' and contraseña= '$contraseña'";
-        $respuesta = $connection->query($sql);
-        $resultado = $respuesta ->fetch_assoc();
-        if($resultado == null ){
-            return $resultado;
-        }else{
-             $_SESSION["email"] = $email; 
-             return "resultado correcto";
-            }    
+
+        $sql = "SELECT * FROM usuario WHERE email = ?";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $respuesta = $stmt->get_result();
+        $resultado = $respuesta->fetch_assoc();
+        
+        if ($resultado == null) {
+            return null;
+        } else {
+            // Verificar la contraseña usando password_verify()
+            if (password_verify($contraseña, $resultado['contraseña'])) {
+                $_SESSION["email"] = $email;
+                return "resultado correcto";
+            } else {
+                return "Contraseña incorrecta";
+            }
         }
+    }
     
     function RegisterUsuarioModel($nombrecompleto, $email, $contraseña){
-            $connection = connection();
-            $sql = "INSERT INTO usuario(nombrecompleto, email, contraseña) VALUES('$nombrecompleto', '$email', '$contraseña');";
-            $respuesta = $connection->query($sql);
-            return $respuesta;
-        }
-    
+        $connection = connection();
+
+        // Hash de la contraseña
+        $contraseñaHash = password_hash($contraseña, PASSWORD_BCRYPT);
+
+        // Usar una sentencia preparada para evitar inyecciones SQL
+        $sql = "INSERT INTO usuario(nombrecompleto, email, contraseña) VALUES(?, ?, ?)";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("sss", $nombrecompleto, $email, $contraseñaHash);
+        $respuesta = $stmt->execute();
+
+        // Cerrar la sentencia
+        $stmt->close();
+
+        return $respuesta;
+    }
 
     function ActualizarContraseñaModel($contraseña, $email){
-        $sql = "UPDATE usuario SET contraseña = '$contraseña' WHERE email = '$email';"; 
         $connection = connection();
-        $respuesta = $connection->query($sql);
+
+        // Hash de la nueva contraseña
+        $contraseñaHash = password_hash($contraseña, PASSWORD_BCRYPT);
+
+
+        $sql = "UPDATE usuario SET contraseña = ? WHERE email = ?";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("ss", $contraseñaHash, $email);
+        $respuesta = $stmt->execute();
+
+        // Cerrar la sentencia
+        $stmt->close();
+
         return $respuesta;
     }
 }
-
-
-
 
 
 
