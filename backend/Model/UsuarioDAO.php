@@ -32,13 +32,10 @@ class Usuario {
         // Hash de la contraseña
         $contraseñaHash = password_hash($contraseña, PASSWORD_BCRYPT);
 
-        // Usar una sentencia preparada para evitar inyecciones SQL
         $sql = "INSERT INTO usuario(nombrecompleto, email, contraseña) VALUES(?, ?, ?)";
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("sss", $nombrecompleto, $email, $contraseñaHash);
         $respuesta = $stmt->execute();
-
-        // Cerrar la sentencia
         $stmt->close();
 
         return $respuesta;

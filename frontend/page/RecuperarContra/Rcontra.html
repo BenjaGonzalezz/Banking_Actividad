@@ -15,9 +15,6 @@
                 <img class="logo-marca" src="../../assets/logoBanco.png" alt="">
             </a>
         </div>
-        <div class="div-transaccion">
-            <a class="a-transaccion" href="../transaccion/transaccion.html">transacción</a>
-        </div>
 
         <div class="login-boton">
             <input type="checkbox" class="menu-desplegable" id="menu-toggle">
@@ -33,16 +30,11 @@
     <main>
         <div class="Login">
             <div class="Login1">
-                <h1 class="h1">Ingrese la nueva contraseña</h1>
-                <form id="Login">
-                    <p class="parrafo-contra">Ingrese la contraseña enviada a su correo electronico.</p>
-                    <label for="usuario">Nueva Contraseña</label>
-                    <input type="password" id="correo" name="correo" required>
-                    <label for="usuario">Repita la nueva contraseña</label>
-                    <input type="password" id="correo" name="correo" required>
-
-                    <button class="boton-loginnn" type="submit">Restablecer Contraseña</button>
-
+                <h1 class="h1">Ingrese el Código</h1>
+                <form action="../../../backend/Model/verificar.php" method="post" id="Login">
+                    <label for="codigo">Introduce el código recibido al Email:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                    <button type="submit">Verificar</button>
                 </form>
             </div>
         </div>

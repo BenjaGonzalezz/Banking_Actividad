@@ -17,10 +17,10 @@ window.onload=()=>{
         console.log(datos);
     
         if (datos ==null){
-            alert("Datos incorrectos");
+            alert("Datos Incorrectos");
         }else{
            alert("Bienvenido al sistema");
-           window.location.href=''
+           window.location.href='../login.html'
         }
     }
 }

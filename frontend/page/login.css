@@ -13,6 +13,9 @@ header {
     width: 100%;
     background-color: var(--principal-color);
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 90000;
 }
 
 .user {
@@ -30,6 +33,7 @@ header {
     align-items: center;
     justify-content: end;
     margin-right: 90px;
+    width: 100%;
 }
 
 .menu-desplegable {
@@ -70,10 +74,13 @@ header {
 
 .menu a:hover {
     opacity: .7;
+    background-color: #ccc;
 }
 
 .menu-desplegable:checked+.login-link+.menu {
-    max-height: 150px;
+    max-height: none; /* Permitir altura automática */
+    height: auto;     /* Asegurar altura según el contenido */
+    width: 300px;
 }
 
 .menu-desplegable:not(:checked)+.login-link+.menu {
@@ -107,6 +114,7 @@ header {
 .a-transaccion:hover{
     opacity: .7;
 }
+
 
 
 /* LOGIN */
