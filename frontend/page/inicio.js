@@ -38,5 +38,8 @@ function verificarSesion() {
         // Mostrar elementos que solo deben aparecer cuando el usuario no está autenticado
         document.getElementById('userEmailDisplay').style.display = 'none';
         document.getElementById('cerrarSesion').style.display = 'none';
+        document.getElementById('desaparecer2').style.display = 'none';
+        document.getElementById('desaparecer3').style.display = 'none';
+        document.getElementById('desaparecer4').style.display = 'none';
     }
 }

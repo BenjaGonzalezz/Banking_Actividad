@@ -13,6 +13,7 @@ header {
     width: 100%;
     background-color: var(--principal-color);
     display: flex;
+    z-index: 90000;
 }
 
 .user {
@@ -70,10 +71,12 @@ header {
 
 .menu a:hover {
     opacity: .7;
+    background-color: #ccc;
 }
 
 .menu-desplegable:checked+.login-link+.menu {
     max-height: 150px;
+    width: 300px;
 }
 
 .menu-desplegable:not(:checked)+.login-link+.menu {
@@ -107,6 +110,7 @@ header {
 .a-transaccion:hover{
     opacity: .7;
 }
+
 
 
 

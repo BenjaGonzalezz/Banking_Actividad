@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="agregar.css" />
+    <script src="agregar.js"></script>
     <title>Agregar Saldo</title>
   </head>
   <body>
@@ -13,11 +14,6 @@
           <img class="logo-marca" src="../../assets/logoBanco.png" alt="" />
         </a>
       </div>
-      <div class="div-transaccion">
-        <a class="a-transaccion" href="../transaccion/transaccion.html"
-          >transacción</a
-        >
-      </div>
 
       <div class="login-boton">
         <input type="checkbox" class="menu-desplegable" id="menu-toggle" />
@@ -25,8 +21,13 @@
           <img class="user" src="../../assets/user.webp" alt="" />
         </label>
         <div class="menu">
-          <a href="../login.html">LogIn</a>
-          <a href="../registro/registro.html">Registro</a>
+            <a id="desaparecer" href="login.html">LogIn</a>
+            <a id="desaparecer1" href="../page/registro/registro.html">Registro</a>
+            <p id="desaparecer2" style="font-size: 10px; padding: 6px; text-align: center;">Email</p>
+            <span id="userEmailDisplay" style="padding: 2px 0px 12px 0px; margin:0; text-align: center; border-bottom: 2px solid red;">"Email"</span>
+            <a id="desaparecer3" class="a-transaccion" href="#">Agregar Saldo</a>
+            <a id="desaparecer4" class="a-transaccion" href="../transaccion/transaccion.html" style="border-bottom: 1px solid rgb(252, 162, 162);">Transacción</a>
+            <a id="cerrarSesion" href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
         </div>
       </div>
     </header>

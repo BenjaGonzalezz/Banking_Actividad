@@ -30,6 +30,7 @@ header {
     align-items: center;
     justify-content: end;
     margin-right: 90px;
+    width: 100%;
 }
 
 .menu-desplegable {
@@ -70,10 +71,13 @@ header {
 
 .menu a:hover {
     opacity: .7;
+    background-color: #ccc;
 }
 
 .menu-desplegable:checked+.login-link+.menu {
-    max-height: 150px;
+    max-height: none; /* Permitir altura automática */
+    height: auto;     /* Asegurar altura según el contenido */
+    width: 300px;
 }
 
 .menu-desplegable:not(:checked)+.login-link+.menu {
@@ -108,7 +112,12 @@ header {
     opacity: .7;
 }
 
+
+
+
 /* // */
+
+
 main{
     height: 780px;
 }
