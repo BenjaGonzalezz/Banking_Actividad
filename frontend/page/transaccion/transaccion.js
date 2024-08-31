@@ -40,5 +40,6 @@ function verificarSesion() {
         document.getElementById('desaparecer2').style.display = 'none';
         document.getElementById('desaparecer3').style.display = 'none';
         document.getElementById('desaparecer4').style.display = 'none';
+        document.getElementById('desaparecer5').style.display = 'none';
     }
 }

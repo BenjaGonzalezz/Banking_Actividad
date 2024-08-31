@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crearCuenta.css">
+    <script src="crearCuenta.js"></script>
+    <title>Aceptar Cuenta</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor-img">
+          <a href="../inicio.html">
+            <img class="logo-marca" src="../../assets/logoBanco.png" alt="" />
+          </a>
+        </div>
+        <div class="login-boton">
+          <input type="checkbox" class="menu-desplegable" id="menu-toggle" />
+          <label class="login-link" for="menu-toggle">
+            <img class="user" src="../../assets/user.webp" alt="" />
+          </label>
+          <div class="menu">
+              <a id="desaparecer" href="login.html">LogIn</a>
+              <a id="desaparecer1" href="../page/registro/registro.html">Registro</a>
+              <p id="desaparecer2" style="font-size: 10px; padding: 6px; text-align: center;">Email</p>
+              <span id="userEmailDisplay" style="padding: 2px 0px 12px 0px; margin:0; text-align: center; border-bottom: 2px solid red;">"Email"</span>
+              <a id="desaparecer5" class="a-transaccion" href="../crearCuentaBanco/crearCuenta.html">Crear cuenta Bancaria</a>
+              <a id="desaparecer3" class="a-transaccion" href="../AgregarSaldo/agregar.html">Agregar Saldo</a>
+              <a id="desaparecer4" class="a-transaccion" href="../transaccion/transaccion.html" style="border-bottom: 1px solid rgb(252, 162, 162);">Transacción</a>
+              <a id="cerrarSesion" href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="terms">
+            <h2>Términos y Condiciones de Uso</h2>
+            <p>Bienvenido a nuestro banco especializado en transferencias. Antes de utilizar nuestros servicios, por favor lea detenidamente los siguientes términos y condiciones:</p>
+            <ul>
+                <li>Las transferencias realizadas a través de nuestro banco están sujetas a las tasas y comisiones aplicables.</li>
+                <li>El banco no se responsabiliza por transferencias incorrectas debido a errores en la información proporcionada por el usuario.</li>
+                <li>Los usuarios deben verificar que los detalles de la transferencia sean correctos antes de confirmar la transacción.</li>
+                <li>El banco se reserva el derecho de suspender o cancelar las cuentas de usuario que incumplan con estos términos y condiciones.</li>
+                <li>El banco puede modificar estos términos en cualquier momento, y los usuarios serán notificados de dichos cambios.</li>
+            </ul>
+            <p>Al hacer clic en "Aceptar", usted confirma que ha leído y acepta todos los términos y condiciones mencionados anteriormente.</p>
+        </div>
+
+        <div class="input-acept">
+        <input class="accept-btn" type="button" value="Aceptar y Crear Cuenta">
+        </div>
+
+    </main>
+</body>
+</html>

@@ -12,7 +12,11 @@ class Usuario {
         $stmt->execute();
         $respuesta = $stmt->get_result();
         $resultado = $respuesta->fetch_assoc();
-        
+
+        session_start();
+        $_SESSION['id_usuario'] = $resultado['id_usuario'];
+        return $resultado;
+
         if ($resultado == null) {
             return null;
         } else {
