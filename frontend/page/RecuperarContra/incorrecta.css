@@ -122,19 +122,12 @@ h1 {
     padding-bottom: 20px;
     border-bottom: 1px solid var(--secundario-color);
 }
-h2{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 90px;
-    font-size: 3rem;
-}
+
 .Login {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 520px;
+    height: 590px;
 }
 
 .Login1 {
@@ -158,24 +151,7 @@ h2{
     margin: 10px 0;
 }
 
-.Login1 button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(223, 47, 47);
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 30px;
-}
 
-.Login1 button:hover {
-    opacity: .8;
-}
-
-.parrafo-contra {
-    opacity: .7;
-}
 
 .volver-boton {
     display: flex;
@@ -188,67 +164,4 @@ h2{
 
 .volver-boton:hover {
     opacity: .7;
-}
-
-.ojitoContra{
-    position: absolute;
-    width: 30px;
-    cursor: pointer;
-    top: 5px;
-    right: 5px;
-    box-sizing: border-box;
-    margin-right: 7px;
-}
-
-
-/* FOOTER */
-
-footer {
-    height: 200px;
-    width: 100%;
-    background-color: var(--principal-color);
-}
-
-.footer-title {
-    width: 100%;
-    background-color: rgb(253, 157, 157);
-    text-align: center;
-    padding: 18px 0;
-    font-size: 17px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin: 0;
-    user-select: none;
-}
-
-.footer-title-lit {
-    margin: 0;
-}
-
-h4 {
-    margin: 0;
-}
-
-.footer-cont {
-    width: 50%;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.footer-text {
-    padding-top: 15px;
-}
-
-.parrafo {
-    margin-top: 20px;
-}
-
-.footer-cont2 {
-    width: 50%;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.contenido-footer {
-    display: flex;
-    margin-top: 10px;
 }

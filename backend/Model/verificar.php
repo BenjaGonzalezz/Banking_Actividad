@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Redirigir al usuario a una página para cambiar la contraseña
     } else {
         echo 'Código incorrecto.';
+        header('Location: ../../frontend/page/RecuperarContra/incorrecto.html');
     }
 } else {
     echo 'Método de solicitud no permitido.';
