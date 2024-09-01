@@ -26,6 +26,7 @@
             <p id="desaparecer2" style="font-size: 10px; padding: 6px; text-align: center;">Email</p>
             <span id="userEmailDisplay" style="padding: 2px 0px 12px 0px; margin:0; text-align: center; border-bottom: 2px solid red;">"Email"</span>
             <a id="desaparecer5" class="a-transaccion" href="../crearCuentaBanco/crearCuenta.html">Cuenta Bancaria</a>
+            <a id="desaparecer6" class="a-transaccion" href="../tusCuentas/tusCuentas.html">Tus Cuentas</a>
             <a id="desaparecer3" class="a-transaccion" href="#">Agregar Saldo</a>
             <a id="desaparecer4" class="a-transaccion" href="../transaccion/transaccion.html" style="border-bottom: 1px solid rgb(252, 162, 162);">Transacción</a>
             <a id="cerrarSesion" href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
@@ -35,15 +36,22 @@
     <main>
         <div class="agregar-saldo">
           <div class="a-saldo">
-            <form>
+            <form id="agregarSaldo">
               <h3>Agregar Saldo</h3>
-
-              <div class="dis"> 
-                <label for="usuario">Cantidad</label>
-                <input type="number" id="saldo" name="saldo" required />
+              <div class="div-cont">
+                <div>
+              <div class="dis">
+                <label for="n_cuenta">N_Cuenta:</label>
+                <input type="number" id="n_cuenta" name="n_cuenta" required />
               </div>
+            </div>
+              <div class="dis"> 
+                <label for="cantimontodad">Cantidad:</label>
+                <input type="number" id="monto" name="monto" required />
+              </div>
+            </div>
 
-              <button class="boton-agregar" type="submit">Agregar</button>
+              <input class="boton-agregar" type="submit" value="Agregar Saldo">
             </form>
           </div>
         </div>

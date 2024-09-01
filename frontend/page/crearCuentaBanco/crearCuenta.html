@@ -25,6 +25,7 @@
               <p id="desaparecer2" style="font-size: 10px; padding: 6px; text-align: center;">Email</p>
               <span id="userEmailDisplay" style="padding: 2px 0px 12px 0px; margin:0; text-align: center; border-bottom: 2px solid red;">"Email"</span>
               <a id="desaparecer5" class="a-transaccion" href="../crearCuentaBanco/crearCuenta.html">Crear cuenta Bancaria</a>
+              <a id="desaparecer6" class="a-transaccion" href="../tusCuentas/tusCuentas.html">Tus Cuentas</a>
               <a id="desaparecer3" class="a-transaccion" href="../AgregarSaldo/agregar.html">Agregar Saldo</a>
               <a id="desaparecer4" class="a-transaccion" href="../transaccion/transaccion.html" style="border-bottom: 1px solid rgb(252, 162, 162);">Transacción</a>
               <a id="cerrarSesion" href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
@@ -44,10 +45,11 @@
             </ul>
             <p>Al hacer clic en "Aceptar", usted confirma que ha leído y acepta todos los términos y condiciones mencionados anteriormente.</p>
         </div>
-
-        <div class="input-acept">
-        <input class="accept-btn" type="button" value="Aceptar y Crear Cuenta">
-        </div>
+        <form id="form-crear">
+          <div class="input-acept">
+            <input class="accept-btn" type="submit" value="Aceptar y Crear Cuenta">
+          </div>
+        </form>
 
     </main>
 </body>

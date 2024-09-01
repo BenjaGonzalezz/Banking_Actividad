@@ -1,6 +1,7 @@
 window.onload = () => {
     mostrarCorreoUsuario();
     verificarSesion();
+    crearCuenta();
 }
 
 function mostrarCorreoUsuario() {
@@ -44,3 +45,28 @@ function verificarSesion() {
     }
 }
 
+
+function crearCuenta() {
+    let formElement = document.querySelector("#form-crear");
+
+    formElement.onsubmit = async (e) => {
+        e.preventDefault();
+        let formData = new FormData(formElement);
+        let url = "http://localhost/banking_actividad/backend/Controller/cuentaControlador.php?function=crear";
+
+        let config = {
+            method: "POST",
+            body: formData
+        };
+
+        alert("Se creó una nueva cuenta para este Email");
+        
+            let respuesta = await fetch(url, config);
+            let datos = await respuesta.json();
+            console.log(datos); // Verifica la respuesta del servidor
+
+
+
+
+    };
+}

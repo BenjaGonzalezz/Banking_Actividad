@@ -1,6 +1,7 @@
 window.onload = () => {
     mostrarCorreoUsuario();
     verificarSesion();
+    agregarSaldo();
 }
 
 function mostrarCorreoUsuario() {
@@ -44,3 +45,27 @@ function verificarSesion() {
     }
 }
 
+function agregarSaldo() {
+    let formElement = document.querySelector("#agregarSaldo");
+
+    formElement.onsubmit = async (e) => {
+        e.preventDefault();
+        console.log("Formulario enviado"); // Verifica que esto se imprime en la consola
+        let formData = new FormData(formElement);
+        let url = "http://localhost/banking_actividad/backend/Controller/cuentaControlador.php?function=agregar";
+
+        let config = {
+            method: "POST",
+            body: formData
+        };
+
+        
+        alert("✅se agrego el monto a la cuenta seleccionada✅");
+        window.location.href = '../tusCuentas/tusCuentas.html';
+
+            let respuesta = await fetch(url, config);
+            let datos = await respuesta.json();
+            console.log(datos);
+
+    }
+}

@@ -1,6 +1,8 @@
 window.onload = () => {
     mostrarCorreoUsuario();
     verificarSesion();
+    obtenerCuenta();
+    mostrarCuenta();
 }
 
 function mostrarCorreoUsuario() {
@@ -43,5 +45,27 @@ function verificarSesion() {
         document.getElementById('desaparecer4').style.display = 'none';
         document.getElementById('desaparecer5').style.display = 'none';
         document.getElementById('desaparecer6').style.display = 'none';
+    }
+}
+
+
+async function obtenerCuenta(){
+    let url ="http://localhost/banking_actividad/backend/Controller/cuentaControlador.php?function=obtener";
+    let consulta = await fetch(url);
+    let datos = await consulta.json();
+    listadecuenta=datos;
+    mostrarCuenta(datos) 
+}
+function mostrarCuenta(cuenta){
+    let tbodyElement = document.querySelector("#cuerpotablaObtener")
+    tbodyElement.innerHTML="";
+    for(let i=0; i < cuenta.length;i++){
+     tbodyElement.innerHTML+=`
+     <tr>
+        <td class="td1">${cuenta[i].id_usuario}</td>
+        <td class="td2">${cuenta[i].n_cuenta}</td>
+        <td class="td3">${cuenta[i].saldo}</td>
+     </tr>
+        `;
     }
 }

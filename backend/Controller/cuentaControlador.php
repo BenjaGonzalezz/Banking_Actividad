@@ -13,6 +13,9 @@ switch ($function) {
     case "agregar":
        agregarSaldo();
         break;
+    case "obtener":
+        obtenerCuenta();
+        break; 
 }
 
 function crearCuenta(){
@@ -28,4 +31,10 @@ function agregarSaldo(){
 
     $resultado = (new cuenta())->recargarCuenta($n_cuenta, $monto);
 
+}
+
+
+function obtenerCuenta(){   
+    $resultado = (new cuenta())->obtenerCuenta();   
+    echo json_encode($resultado);
 }
