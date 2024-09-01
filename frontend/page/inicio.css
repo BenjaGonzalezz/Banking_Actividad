@@ -7,15 +7,13 @@ body {
     padding: 0;
     --principal-color: rgb(255, 215, 215);
     --secundario-color: rgb(224, 50, 50);
+    background-color: #f6f6f6;
 }
 
 header {
     width: 100%;
     background-color: var(--principal-color);
     display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 90000;
 }
 
 .user {
@@ -139,26 +137,136 @@ h1 {
 .logo-inicio:hover{
     filter: grayscale(0%);
 }
-
-h3 {
-    text-align: center;
-    font-size: 40px;
-    margin-top: 100px;
-}
-
 .pa {
     width: 550px;
     text-align: center;
     margin: auto;
-    font-size: 17px;
-    margin-bottom: 200px;
+    font-size: 19px;
+    margin-bottom: 80px;
+    
 }
 
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+}
+.p{
+    font-size: 18px;
+    text-align: center;
+}
+.inaguracion-container{
+    width: 57%;
+    display: flex;
+    margin: 70px auto;
+    border: 2px solid red;
+    border-radius: 14px;
+    background-color: rgb(255, 207, 207);
+}
+.inaguracion{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px;
+}
+.mercado-container{
+    width: 57%;
+    display: flex;
+    margin: 0 auto;
+    border: 2px solid red;
+    border-radius: 14px;
+    background-color: rgb(255, 207, 207);
+}
+.mercado{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px;
+}
+.img-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-inaguracion{
+    width: 340px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    margin-top: 60px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.img-inaguracion:hover{
+    transform: scale(1.1);
+}
+
+.img-mercado{
+    width: 340px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    margin-top: 60px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.img-mercado:hover{
+    transform: scale(1.1);
+}
+
+/* MAIN EMPRESARIOS  */
+
+.empresarios-container{
+    width: 100%;
+    display: flex;
+    margin: 0 auto 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.h4{
+    margin-top: 130px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+h5{
+    text-align: center;
+    font-size: 17px;
+}
+.emp{
+    width: 170px;
+    height: 240px;
+    border-radius: 16px;
+    margin: 0 auto;
+    user-select: none;
+}
+.emp2{
+    width: 200px;
+    height: 240px;
+    border-radius: 16px;
+    margin: 0 auto;
+    user-select: none;
+}
+.img-empresarios{
+    width: 100%;
+    display: flex;
+}
+.empresario1{
+    width: 270px;
+    height: 340px;
+    background-color: var(--principal-color);
+    margin: 0 30px;
+    border-radius: 16px;
+    border: 2px solid var(--secundario-color);
+}
 
 /* FOOTER */
 
 footer {
-    height: 200px;
+    margin-top: 200px;
     width: 100%;
     background-color: var(--principal-color);
 }
@@ -178,7 +286,7 @@ footer {
     margin: 0;
 }
 
-h4 {
+.footer-text{
     margin: 0;
 }
 

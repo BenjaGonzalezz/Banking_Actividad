@@ -41,7 +41,10 @@ class cuenta {
 
     function obtenerCuenta(){
         $connection = connection();
-        $sql = "SELECT * FROM cuenta";
+        $sql = "
+        SELECT cuenta.*, usuario.nombrecompleto 
+        FROM cuenta 
+        JOIN usuario ON cuenta.id_usuario = usuario.id_usuario";
         $respuesta = $connection->query($sql);
         $cuenta = $respuesta->fetch_all(MYSQLI_ASSOC);
         return $cuenta;

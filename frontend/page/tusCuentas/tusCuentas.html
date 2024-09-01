@@ -1,75 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tusCuentas.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tusCuentas.css" />
     <script src="tusCuentas.js"></script>
     <title>Tus Cuentas</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="contenedor-img">
-            <a href="../inicio.html">
-                <img class="logo-marca" src="../../assets/logoBanco.png" alt="">
-            </a>
-        </div>
-        <div class="login-boton">
-            <input type="checkbox" class="menu-desplegable" id="menu-toggle">
-            <label class="login-link" for="menu-toggle">
-            <img class="user" src="../../assets/user.webp" alt="">
+      <div class="contenedor-img">
+        <a href="../inicio.html">
+          <img class="logo-marca" src="../../assets/logoBanco.png" alt="" />
+        </a>
+      </div>
+      <div class="login-boton">
+        <input type="checkbox" class="menu-desplegable" id="menu-toggle" />
+        <label class="login-link" for="menu-toggle">
+          <img class="user" src="../../assets/user.webp" alt="" />
         </label>
-            <div class="menu">
-                <a id="desaparecer" href="../login.html">LogIn</a>
-                <a id="desaparecer1" href="../registro/registro.html">Registro</a>
-                <p id="desaparecer2" style="font-size: 10px; padding: 6px; text-align: center;">Email</p>
-                <span id="userEmailDisplay" style="padding: 2px 0px 12px 0px; margin:0; text-align: center; border-bottom: 2px solid red;">"Email"</span>
-                <a id="desaparecer5" class="a-transaccion" href="../crearCuentaBanco/crearCuenta.html">Crear cuenta Bancaria</a>
-                <a id="desaparecer6" class="a-transaccion" href="#">Tus Cuentas</a>
-                <a id="desaparecer3" class="a-transaccion" href="../AgregarSaldo/agregar.html">Agregar Saldo</a>
-                <a id="desaparecer4" class="a-transaccion" href="../transaccion/transaccion.html" style="border-bottom: 1px solid rgb(252, 162, 162);">Transacción</a>
-                <a id="cerrarSesion" href="../inicio.html" onclick="logoutUsuario()">Cerrar Sesión</a>
-            </div>
+        <div class="menu">
+          <a id="desaparecer" href="../login.html">LogIn</a>
+          <a id="desaparecer1" href="../registro/registro.html">Registro</a>
+          <p
+            id="desaparecer2"
+            style="font-size: 10px; padding: 6px; text-align: center"
+          >
+            Email
+          </p>
+          <span
+            id="userEmailDisplay"
+            style="
+              padding: 2px 0px 12px 0px;
+              margin: 0;
+              text-align: center;
+              border-bottom: 2px solid red;
+            "
+            >"Email"</span
+          >
+          <a
+            id="desaparecer5"
+            class="a-transaccion"
+            href="../crearCuentaBanco/crearCuenta.html"
+            >Crear cuenta Bancaria</a
+          >
+          <a id="desaparecer6" class="a-transaccion" href="#"
+            >Todas las Cuentas</a
+          >
+          <a
+            id="desaparecer3"
+            class="a-transaccion"
+            href="../AgregarSaldo/agregar.html"
+            >Agregar Saldo</a
+          >
+          <a
+            id="desaparecer4"
+            class="a-transaccion"
+            href="../transaccion/transaccion.html"
+            style="border-bottom: 1px solid rgb(252, 162, 162)"
+            >Transacción</a
+          >
+          <a id="cerrarSesion" href="../inicio.html" onclick="logoutUsuario()"
+            >Cerrar Sesión</a
+          >
         </div>
+      </div>
     </header>
     <main>
-        <h1>Todas Las Cuentas</h1>
+      <h1>Todas Las Cuentas</h1>
 
-        <div class="tabla-container">
-            <table>
-              <thead class="header-tabla">
-                <tr>
-                  <th class="th1">Id Usuario</th>
-                  <th class="th2">Numero de Cuenta</th>
-                  <th class="th3">Saldo</th>
-                </tr>
-              </thead>
-              <tbody id="cuerpotablaObtener"></tbody>
-            </table>
-        </div>
+      <div class="usu"></div>
+
+      <div class="tabla-container">
+        <table>
+          <thead class="header-tabla">
+            <tr>
+              <th class="th1">Usuario</th>
+              <th class="th2">Numero de Cuenta Bancaria</th>
+              <th class="th3">Saldo</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpotablaObtener"></tbody>
+        </table>
+      </div>
     </main>
     <footer>
-        <div class="footer-title">
-            <p class="footer-title-lit">Banking Copyright © 2024</p>
+      <div class="footer-title">
+        <p class="footer-title-lit">Banking Copyright © 2024</p>
+      </div>
+      <div class="contenido-footer">
+        <div class="footer-cont">
+          <h4 class="footer-text">Contactanos</h4>
+          <p class="parrafo">Telefono: 091 605 032</p>
+          <p class="parrafo">Email: ebanking@gmail.com</p>
         </div>
-        <div class="contenido-footer">
-            <div class="footer-cont">
-                <h4 class="footer-text">Contactanos</h4>
-                <p class="parrafo">
-                    Telefono: 091 605 032
-                </p>
-                <p class="parrafo">
-                    Email: ebanking@gmail.com
-                </p>
-            </div>
-            <div class="footer-cont2">
-                <h4 class="footer-text">Direccion</h4>
-                <p class="parrafo">
-                    Colonia del Sacramento, Andres Rebufat 400
-                </p>
-
-            </div>
+        <div class="footer-cont2">
+          <h4 class="footer-text">Direccion</h4>
+          <p class="parrafo">Colonia del Sacramento, Andres Rebufat 400</p>
         </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

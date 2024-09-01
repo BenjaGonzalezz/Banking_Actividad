@@ -133,6 +133,7 @@ table{
     border: 2px solid var(--secundario-color);
     width: 80%;
     margin: 0 auto 100px auto;
+    border-radius: 15px;
 }
 .header-tabla{
     width: 100%;
@@ -146,7 +147,8 @@ tr{
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    border-bottom: 1px solid var(--principal-color);
+    border-bottom: 2px solid var(--secundario-color);
+    box-shadow: 0 0 6px var(--secundario-color);
 }
 
 th{
@@ -167,20 +169,50 @@ th{
 td{
     padding: 20px 60px;
 }
+.contenedor{
+    height: 100%;
+    width: 100%;
+    border-right: 3px solid red;
+}
 .td1{
     width: 33%;
-    height: 100%;
-    border-right: 2px solid var(--principal-color);
+    height: 150px;
+    padding: 15px;
 }
 .td2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 33%;
-    border-right: 2px solid var(--principal-color);
+    height: 150px;
+    border-left: 1px solid var(--principal-color);
 }
 .td3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 33%;
+    height: 150px;
+    border-left: 1px solid var(--principal-color);
 }
-
-
+.parrafo-tabla{
+    margin: 0;
+    padding: 0;
+}
+.parrafo-tabla2{
+    margin: 0 0 7px 0;
+    padding: 0;
+    opacity: .7;
+}
+.usu{
+    display: flex;
+    margin: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /* FOOTER */

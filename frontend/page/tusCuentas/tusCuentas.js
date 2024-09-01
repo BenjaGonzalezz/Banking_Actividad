@@ -62,7 +62,17 @@ function mostrarCuenta(cuenta){
     for(let i=0; i < cuenta.length;i++){
      tbodyElement.innerHTML+=`
      <tr>
-        <td class="td1">${cuenta[i].id_usuario}</td>
+        <td class="td1">
+
+        <div class="usu">
+        <p class="parrafo-tabla">ID:</P>
+        ${cuenta[i].id_usuario}
+        </div>
+        
+        <p class="parrafo-tabla2">Nombre:</P>
+        ${cuenta[i].nombrecompleto}
+
+        </td>
         <td class="td2">${cuenta[i].n_cuenta}</td>
         <td class="td3">${cuenta[i].saldo}</td>
      </tr>
