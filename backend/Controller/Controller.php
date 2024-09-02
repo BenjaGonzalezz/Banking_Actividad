@@ -12,8 +12,8 @@ switch ($function) {
         break;
 }
 
-function RegisterUsuario()
-{
+function RegisterUsuario(){
+    
     $nombrecompleto = $_POST['nombrecompleto'];
     $email = $_POST['email'];
     $contraseña = $_POST['contraseña'];

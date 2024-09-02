@@ -137,13 +137,17 @@ h1 {
 .logo-inicio:hover{
     filter: grayscale(0%);
 }
+.d-pa{
+    width: 100%;
+    background-color: rgb(215, 215, 215);
+}
 .pa {
     width: 550px;
     text-align: center;
     margin: auto;
-    font-size: 19px;
+    font-size: 21px;
     margin-bottom: 80px;
-    
+    padding: 40px 0;
 }
 
 

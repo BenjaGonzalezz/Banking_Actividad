@@ -40,15 +40,27 @@
           <form id="Login">
             <label for="usuario">Numero de cuenta</label>
             <p class="parrafo-cuenta">
+              Ingrese su numero de cuenta
+            </p>
+            <input
+              type="numer"
+              id=""
+              name="n_cuentaremitente"
+              class="input-cuentaa"
+              placeholder="Ej: 8"
+              required 
+            />
+            <label for="usuario">Destinatario</label>
+            <p class="parrafo-cuenta">
               Ingrese el Nª de cuenta del destinatario
             </p>
-            <p class="parrafo-cuenta2">Ej: 525232</p>
             <input
               type="numer"
               id=""
               name="n_cuentadestino"
               class="input-cuentaa"
-              required
+              placeholder="Ej: 23"
+              required 
             />
 
             <div class="monto-tra">
@@ -81,7 +93,7 @@
                 caracteres
               </p>
               <textarea
-                name=""
+                name="concepto"
                 class="input_cuenta"
                 maxlength="255"
                 style="resize: none"
