@@ -23,8 +23,8 @@ function loginUsuario() {
         let datos = await respuesta.json();
         console.log(datos); // Verifica la respuesta del servidor
 
-        if (datos == null || datos.error) {
-            alert("Datos incorrectos");
+        if (datos.error) {
+            mostrarAlerta(datos.error); // Mostrar alerta con el error devuelto
         } else {
             // Almacenar información de sesión en localStorage
             localStorage.setItem('userToken', datos.token); // Suponiendo que la respuesta contiene un token

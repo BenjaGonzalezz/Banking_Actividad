@@ -1,6 +1,7 @@
 window.onload = () => {
     mostrarCorreoUsuario();
     verificarSesion();
+    hacerTransaccion();
 }
 
 function mostrarCorreoUsuario() {
@@ -70,5 +71,59 @@ function verificarSesion() {
         document.getElementById('desaparecer3').style.display = 'none';
         document.getElementById('desaparecer4').style.display = 'none';
         document.getElementById('desaparecer5').style.display = 'none';
+    }
+}
+
+
+function hacerTransaccion() {
+    let formElement = document.querySelector("#transaccionForm");
+
+    formElement.onsubmit = async (e) => {
+        e.preventDefault();
+        let formData = new FormData(formElement);
+        let url = "http://localhost/banking_actividad/backend/Controller/transaccionControlador.php?function=hacerTransaccion";
+
+        let config = {
+            method: "POST",
+            body: formData
+        };
+
+        try {
+            let respuesta = await fetch(url, config);
+            let datos = await respuesta.json();
+            console.log(datos);
+
+            if (datos.status === "success") {
+                mostrarAlertaTransaccion("✅Se hizo la transaccion correctamente✅", () => {
+                    window.location.href = '../tusCuentas/tusCuentas.html';
+                });
+            } else {
+                mostrarAlertaTransaccion(`❌Error: ${datos.message}❌`);
+            }
+        } catch (error) {
+            console.error("Error en la transacción:", error);
+            mostrarAlertaTransaccion("❌Error de conexión. Intente nuevamente.❌");
+        }
+    }
+}
+
+
+//alerta personalizda
+function mostrarAlertaTransaccion(mensaje, callback) {
+    const fondoOscuro = document.getElementById('fondoOscuro2');
+    const alerta = document.getElementById('alertaPersonalizada2');
+    const alertaMensaje = document.getElementById('alertaMensaje2');
+    const alertaCerrar = document.getElementById('alertaCerrar2');
+
+    alertaMensaje.textContent = mensaje;
+    fondoOscuro.style.display = 'block'; // Mostrar el fondo oscuro
+    alerta.style.display = 'block'; // Mostrar la alerta
+
+    alertaCerrar.onclick = function() {
+        fondoOscuro.style.display = 'none'; // Ocultar el fondo oscuro
+        alerta.style.display = 'none'; // Ocultar la alerta
+        if (callback) {
+            callback(); // Ejecutar la función de callback si se proporciona
+        }
     }
 }

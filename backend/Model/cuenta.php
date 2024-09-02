@@ -50,4 +50,5 @@ class cuenta {
         $cuenta = $respuesta->fetch_all(MYSQLI_ASSOC);
         return $cuenta;
     }
+    
 }

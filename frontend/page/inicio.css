@@ -7,7 +7,6 @@ body {
     padding: 0;
     --principal-color: rgb(255, 215, 215);
     --secundario-color: rgb(224, 50, 50);
-    background-color: #f6f6f6;
 }
 
 header {
@@ -117,11 +116,16 @@ header {
 
 /*MAIN*/
 
-
+main{
+    background: linear-gradient(90deg, rgb(255, 250, 224), white);
+    padding-bottom: 200px;
+}
 
 h1 {
     text-align: center;
     font-size: 7rem;
+    margin: 0;
+    padding: 120px 0 100px 0;
 }
 
 .logo-inicio {
@@ -329,7 +333,6 @@ h5{
 /* FOOTER */
 
 footer {
-    margin-top: 200px;
     width: 100%;
     background-color: var(--principal-color);
 }

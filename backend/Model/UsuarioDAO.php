@@ -2,33 +2,32 @@
 require_once "../Connection/Connection.php";
 
 class Usuario { 
-
     function LoginUsuarioModel($email, $contraseña){
         $connection = connection();
-
+    
         $sql = "SELECT * FROM usuario WHERE email = ?";
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $respuesta = $stmt->get_result();
         $resultado = $respuesta->fetch_assoc();
-
-        session_start();
-        $_SESSION['id_usuario'] = $resultado['id_usuario'];
-        return $resultado;
-
-        if ($resultado == null) {
-            return null;
+    
+        // Verificar si el usuario existe
+        if ($resultado === null) {
+            return null; 
+        }
+    
+        // Verificar la contraseña usando password_verify()
+        if (password_verify($contraseña, $resultado['contraseña'])) {
+            session_start();
+            $_SESSION['id_usuario'] = $resultado['id_usuario'];
+            $_SESSION["email"] = $email;
+            return $resultado;
         } else {
-            // Verificar la contraseña usando password_verify()
-            if (password_verify($contraseña, $resultado['contraseña'])) {
-                $_SESSION["email"] = $email;
-                return "resultado correcto";
-            } else {
-                return "Contraseña incorrecta";
-            }
+            return "Contraseña incorrecta";
         }
     }
+    
     
     function RegisterUsuarioModel($nombrecompleto, $email, $contraseña){
         $connection = connection();

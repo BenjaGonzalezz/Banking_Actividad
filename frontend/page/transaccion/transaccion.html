@@ -37,7 +37,7 @@
       <div class="transaccion">
         <div class="transaccion1">
           <h1 class="h1">Transaccion</h1>
-          <form id="Login">
+          <form id="transaccionForm">
             <label for="usuario">Numero de cuenta</label>
             <p class="parrafo-cuenta">
               Ingrese su numero de cuenta
@@ -69,7 +69,7 @@
 
                 <input
                   type="number"
-                  id=""
+                  id="monto"
                   name="monto"
                   class="input_cuenta"
                   required
@@ -79,8 +79,8 @@
               <div class="selector-moneda">
                 <label class="l-selector">Selecciona la moneda:</label>
                 <select id="" class="select-moneda">
-                  <option value="usd">USD</option>
-                  <option value="uyu">Peso Uruguayo</option>
+                  <option value="usd">Peso Uruguayo</option>
+                  <option value="uyu">USD</option>
                 </select>
               </div>
             </div>
@@ -116,6 +116,17 @@
       <p class="p-alerta1" id="alertaMensaje">Ha cerrado sesión correctamente</p>
         <button class="bot" id="alertaCerrar">Aceptar</button>
     </div>
+
+    <!-- Alerta personalizada 2 -->
+    <div id="fondoOscuro2"></div>
+
+    <div id="alertaPersonalizada2">
+      <p class="p-alerta1" id="alertaMensaje2">✅Se agrego Correctamente✅</p>
+      <p class="p-alerta1" id="alertaMensaje2">¡Muchas gracias por usar eBanking!</p>
+        <button class="bot" id="alertaCerrar2">Aceptar</button>
+    </div>
+
+
 
     </main>
 
