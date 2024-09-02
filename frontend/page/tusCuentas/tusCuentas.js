@@ -17,14 +17,42 @@ function mostrarCorreoUsuario() {
     }
 }
 
-function logoutUsuario() {
+
+function logoutUsuario(event) {
+    // Prevenir la redirección automática del enlace
+    if (event) {
+        event.preventDefault();
+    }
+
     // Eliminar datos de sesión en localStorage
     localStorage.removeItem('userToken');
     localStorage.removeItem('email');
-    
-    alert("Has cerrado sesión exitosamente");
-    window.location.href = '#';
-    window.location.reload(); 
+
+    // Mostrar la alerta y redirigir después de que el usuario la cierre
+    mostrarAlerta("Ha cerrado sesión correctamente", () => {
+        window.location.href = '../inicio.html';
+    });
+}
+
+
+//alerta personalizda
+function mostrarAlerta(mensaje, callback) {
+    const fondoOscuro = document.getElementById('fondoOscuro');
+    const alerta = document.getElementById('alertaPersonalizada');
+    const alertaMensaje = document.getElementById('alertaMensaje');
+    const alertaCerrar = document.getElementById('alertaCerrar');
+
+    alertaMensaje.textContent = mensaje;
+    fondoOscuro.style.display = 'block'; // Mostrar el fondo oscuro
+    alerta.style.display = 'block'; // Mostrar la alerta
+
+    alertaCerrar.onclick = function() {
+        fondoOscuro.style.display = 'none'; // Ocultar el fondo oscuro
+        alerta.style.display = 'none'; // Ocultar la alerta
+        if (callback) {
+            callback(); // Ejecutar la función de callback si se proporciona
+        }
+    }
 }
 
 function verificarSesion() {

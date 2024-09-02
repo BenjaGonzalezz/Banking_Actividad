@@ -30,8 +30,28 @@ function loginUsuario() {
             localStorage.setItem('userToken', datos.token); // Suponiendo que la respuesta contiene un token
             localStorage.setItem('email', datos.email); // Almacenar el correo electrónico del usuario
 
-            alert("Login exitoso");
-            window.location.href = '../page/inicio.html';
+            mostrarAlerta("Login exitoso", () => {
+                window.location.href = '../page/inicio.html';
+            });
+        }
+    }
+}
+
+function mostrarAlerta(mensaje, callback) {
+    const fondoOscuro = document.getElementById('fondoOscuro');
+    const alerta = document.getElementById('alertaPersonalizada');
+    const alertaMensaje = document.getElementById('alertaMensaje');
+    const alertaCerrar = document.getElementById('alertaCerrar');
+
+    alertaMensaje.textContent = mensaje;
+    fondoOscuro.style.display = 'block'; // Mostrar el fondo oscuro
+    alerta.style.display = 'block'; // Mostrar la alerta
+
+    alertaCerrar.onclick = function() {
+        fondoOscuro.style.display = 'none'; // Ocultar el fondo oscuro
+        alerta.style.display = 'none'; // Ocultar la alerta
+        if (callback) {
+            callback(); // Ejecutar la función de callback si se proporciona
         }
     }
 }

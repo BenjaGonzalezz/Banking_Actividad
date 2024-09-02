@@ -60,9 +60,10 @@
             style="border-bottom: 1px solid rgb(252, 162, 162)"
             >Transacción</a
           >
-          <a id="cerrarSesion" href="../inicio.html" onclick="logoutUsuario()"
-            >Cerrar Sesión</a
-          >
+<a id="cerrarSesion" href="../inicio.html" onclick="logoutUsuario(event)">Cerrar Sesión</a>
+
+
+  
         </div>
       </div>
     </header>
@@ -83,6 +84,16 @@
           <tbody id="cuerpotablaObtener"></tbody>
         </table>
       </div>
+      
+    <!-- Alerta personalizada -->
+     
+    <div id="fondoOscuro"></div>
+
+    <div id="alertaPersonalizada">
+      <p class="p-alerta1" id="alertaMensaje">Ha cerrado sesión correctamente</p>
+        <button class="bot" id="alertaCerrar">Aceptar</button>
+    </div>
+
     </main>
     <footer>
       <div class="footer-title">

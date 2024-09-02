@@ -29,7 +29,7 @@
             <a id="desaparecer6" class="a-transaccion" href="../tusCuentas/tusCuentas.html">Todas las Cuentas</a>
             <a id="desaparecer3" class="a-transaccion" href="../AgregarSaldo/agregar.html">Agregar Saldo</a>
             <a id="desaparecer4" class="a-transaccion" href="#" style="border-bottom: 1px solid rgb(252, 162, 162);">Transacción</a>
-            <a id="cerrarSesion" href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
+            <a id="cerrarSesion" href="../inicio.html" onclick="logoutUsuario(event)">Cerrar Sesión</a>
         </div>
       </div>
     </header>
@@ -106,7 +106,20 @@
           </form>
         </div>
       </div>
+
+      
+    <!-- Alerta personalizada -->
+     
+    <div id="fondoOscuro"></div>
+
+    <div id="alertaPersonalizada">
+      <p class="p-alerta1" id="alertaMensaje">Ha cerrado sesión correctamente</p>
+        <button class="bot" id="alertaCerrar">Aceptar</button>
+    </div>
+
     </main>
+
+
     <footer>
       <div class="footer-title">
         <p class="footer-title-lit">Banking Copyright © 2024</p>

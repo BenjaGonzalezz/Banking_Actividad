@@ -29,7 +29,7 @@
             <a id="desaparecer6" class="a-transaccion" href="../tusCuentas/tusCuentas.html">Todas las Cuentas</a>
             <a id="desaparecer3" class="a-transaccion" href="#">Agregar Saldo</a>
             <a id="desaparecer4" class="a-transaccion" href="../transaccion/transaccion.html" style="border-bottom: 1px solid rgb(252, 162, 162);">Transacción</a>
-            <a id="cerrarSesion" href="#" onclick="logoutUsuario()">Cerrar Sesión</a>
+            <a id="cerrarSesion" href="../inicio.html" onclick="logoutUsuario(event)">Cerrar Sesión</a>
         </div>
       </div>
     </header>
@@ -56,6 +56,26 @@
           </div>
         </div>
       </div>
+      
+    <!-- Alerta personalizada -->
+     
+    <div id="fondoOscuro"></div>
+    <div id="alertaPersonalizada">
+      <p class="p-alerta1" id="alertaMensaje">Ha cerrado sesión correctamente</p>
+        <button class="bot" id="alertaCerrar">Aceptar</button>
+    </div>
+
+    <!-- Alerta personalizada 2 -->
+    <div id="fondoOscuro2"></div>
+
+    <div id="alertaPersonalizada2">
+      <p class="p-alerta1" id="alertaMensaje2">✅Se agrego Correctamente✅</p>
+      <p class="p-alerta1" id="alertaMensaje2">¡Muchas gracias por usar eBanking!</p>
+        <button class="bot" id="alertaCerrar2">Aceptar</button>
+    </div>
+
+
+    </main>
     </main>
     <footer>
       <div class="footer-title">
