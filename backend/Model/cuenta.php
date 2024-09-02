@@ -36,6 +36,7 @@ class cuenta {
             $respuesta = $connection->query($sql);
 
             return $respuesta;
+    
 
     }
 
