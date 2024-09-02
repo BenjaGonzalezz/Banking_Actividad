@@ -14,7 +14,7 @@ Bienvenido a Banking, el banco especializado en ofrecer las transferencias más 
 
 -Transferencias bancarias
 
-<h3> LENGUAJES UTILIZADOS </h3>
+<h2> LENGUAJES UTILIZADOS </h2>
 
 -javaScript
 
@@ -24,7 +24,7 @@ Bienvenido a Banking, el banco especializado en ofrecer las transferencias más 
 
 -HTML
 
-<h4> BASE DE DATOS </h4>
+<h2> BASE DE DATOS </h2>
 
 BBDD: ebanking.sql
 
