@@ -24,6 +24,8 @@ Bienvenido a Banking, el banco especializado en ofrecer las transferencias más 
 
 -HTML
 
+-CSS
+
 <h2> BASE DE DATOS </h2>
 
 BBDD: ebanking.sql
