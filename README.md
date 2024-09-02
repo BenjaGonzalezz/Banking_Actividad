@@ -29,7 +29,4 @@ Bienvenido a Banking, el banco especializado en ofrecer las transferencias más 
 BBDD: ebanking.sql
 
 Tablas:
-
--Usuario
--Cuenta
--Transferencia
+Usuario, Cuenta y Transferencia
