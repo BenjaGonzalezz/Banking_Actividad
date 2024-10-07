@@ -10,7 +10,12 @@ switch ($function) {
     case "RegisterUsuario":
         RegisterUsuario();
         break;
+    case"crearToken";
+    crearToken();
+    break;
 }
+
+
 
 function RegisterUsuario(){
     
